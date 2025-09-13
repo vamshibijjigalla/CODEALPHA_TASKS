@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How AI is Going - Tracking Artificial Intelligence Progress</title>
+    <meta name="description" content="Explore the rapid evolution of artificial intelligence from breakthrough to breakthrough. Track AI progress, milestones, and future predictions." />
+    <meta name="author" content="AI Progress Tracker" />
+    <meta name="keywords" content="artificial intelligence, AI progress, machine learning, AI timeline, AI capabilities, AI future" />
+
+    <meta property="og:title" content="How AI is Going - Tracking Artificial Intelligence Progress" />
+    <meta property="og:description" content="Explore the rapid evolution of artificial intelligence from breakthrough to breakthrough. Track AI progress, milestones, and future predictions." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- n8n Chat Widget -->
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <div id="n8n-chat"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- n8n Chat Widget Script -->
+    <script type="module">
+      import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+      createChat({
+        webhookUrl: 'https://pranaavv.app.n8n.cloud/webhook/2a6d5676-af0a-4774-9ddc-fbf42e010e35/chat',
+        webhookConfig: {
+          method: 'POST',
+          headers: {}
+        },
+        target: '#n8n-chat',
+        mode: 'window',
+        chatInputKey: 'chatInput',
+        chatSessionKey: 'sessionId',
+        loadPreviousSession: true,
+        metadata: {},
+        showWelcomeScreen: false,
+        defaultLanguage: 'en',
+        initialMessages: [
+          'Hi there! 👋',
+          'My name is Nathan. How can I assist you today?'
+        ],
+        i18n: {
+          en: {
+            title: 'Hi there! 👋',
+            subtitle: "Start a chat. We're here to help you 24/7.",
+            footer: '',
+            getStarted: 'New Conversation',
+            inputPlaceholder: 'Type your question..',
+          },
+        },
+        enableStreaming: false,
+      });
+    </script>
+  </body>
+</html>
